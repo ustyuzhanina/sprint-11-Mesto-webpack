@@ -1,0 +1,14 @@
+.error {
+  font-size: 12px;
+  line-height: 15px;
+  color: #FF0000;
+  display: block;
+  margin: 4px 0 0 6px;
+  box-sizing: border-box;
+  height: 25px;
+  font-family: inherit;
+}
+
+div .error:first-of-type {
+  margin-top: -20px;
+}
