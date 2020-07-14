@@ -2,10 +2,10 @@
 
 Версия 1.0.0
 
-<img src="<%=require('./images/mesto-pic.jpg').default%>" alt="Mesto screenshot with numerous breathtaking pictures" width="400"/>
-
 ## О проекте:
-Демо проект для демонстрации настройки webpack
+Демо проект для демонстрации настройки webpack с использованием синтаксиса Javascript ES6.
+
+<img src="images/mesto-pic.jpg" alt="Mesto screenshot with numerous breathtaking pictures" width="600"/>
 
 ## Основной функционал: 
 - Проект Mesto позволяет делиться любимыми фотографиями со своими друзьями, отмечать понравившиеся и удалять фотографии, которые уже не так сильно радуют глаз, как прежде.
