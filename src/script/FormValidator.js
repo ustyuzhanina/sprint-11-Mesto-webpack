@@ -1,6 +1,6 @@
-'use strict';
+import {errorMessages} from "./data.js";
 
-class FormValidator {
+export class FormValidator {
   constructor(form) {
     this.form = form;
     this.isValidate = this.isValidate.bind(this);

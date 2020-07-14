@@ -1,4 +1,4 @@
-'use strict';
+import {Popup} from "./Popup.js";
 
 class PopupNewPlace extends Popup {
 
@@ -35,3 +35,5 @@ class PopupNewPlace extends Popup {
   }
 
 }
+
+export {PopupNewPlace};

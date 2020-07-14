@@ -1,3 +1,5 @@
+import {Popup} from "./Popup.js";
+
 class PopupImage extends Popup {
 
   constructor(popup) {
@@ -11,3 +13,5 @@ class PopupImage extends Popup {
   }
 
 }
+
+export {PopupImage};

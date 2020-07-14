@@ -1,6 +1,4 @@
-'use strict';
-
-class UserInfo{
+export class UserInfo{
   constructor(userData){
     this.name = userData.name;
     this.about = userData.about;

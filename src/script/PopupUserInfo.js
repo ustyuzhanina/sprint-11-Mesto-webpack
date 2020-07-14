@@ -1,4 +1,4 @@
-'use strict';
+import {Popup} from "./Popup.js";
 
 class PopupUserInfo extends Popup {
 
@@ -37,3 +37,5 @@ class PopupUserInfo extends Popup {
   }
 
 }
+
+export {PopupUserInfo};

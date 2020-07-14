@@ -1,6 +1,14 @@
-'use strict';
+import {Card} from "./Card.js";
+import {CardList} from "./CardList.js";
+import {PopupNewPlace} from "./PopupNewPlace.js";
+import {PopupUserInfo} from "./PopupUserInfo.js";
+import {PopupImage} from "./PopupImage.js";
+import {UserInfo} from "./UserInfo.js";
+import {FormValidator} from "./FormValidator.js";
+import {Api} from "./Api.js";
 
-(function () {
+export default (function () {
+
   const list = document.querySelector(".places-list");
   const popupNewPlace = document.querySelector(".popup_new-place");
   const popupNewPlaceButton = document.querySelector(".user-info__place-button");

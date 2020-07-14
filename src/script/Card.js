@@ -1,6 +1,4 @@
-'use strict';
-
-class Card {
+export class Card {
 
   constructor(cardElement, getPopupImage, api) {
     this.api = api;
