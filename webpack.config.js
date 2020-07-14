@@ -34,13 +34,19 @@ module.exports = {
           'postcss-loader']
       },
       {
-        test: /\.(png|jpe?g|gif|ico|svg)$/, // пример настройки плагина image-webpack-loader
+        test: /\.(png|jpe?g|gif|ico|svg)$/i, // пример настройки плагина image-webpack-loader
         use: [
-                'file-loader?name=../images/[name].[ext]', // указали папку, куда складывать изображения
+                //'file-loader?name=../images/[name].[ext]', // указали папку, куда складывать изображения
+                {
+                  loader: "file-loader",
+                  options: {
+                    esModule: false,
+                  },
+                },
                 {
                   loader: 'image-webpack-loader',
                   options: {
-                    name: '[name].[ext]',
+                    //name: '[name].[ext]',
                     esModule: false
                   }
                 },
