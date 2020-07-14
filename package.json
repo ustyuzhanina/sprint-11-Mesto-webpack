@@ -7,7 +7,7 @@
   "scripts": {
     "build": "rimraf dist && cross-env NODE_ENV=production webpack --mode production",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --mode development --open --watch",
-    "deploy": "cross-env NODE_ENV=production gh-pages -d dist"
+    "deploy": "cross-env NODE_ENV=production gh-pages -d dist -r https://github.com/ustyuzhanina/sprint-11-Mesto-webpack.git"
   },
   "repository": {
     "type": "git",
