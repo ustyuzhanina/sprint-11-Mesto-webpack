@@ -1,7 +1,0 @@
-{
-  "$schema": "http://json.schemastore.org/vsls",
-  "gitignore":"exclude",
-  "excludeFiles":[
-      "E:\\Яндекс.Практикум\\Курс 3\\Спринт 6"
-  ]
-}

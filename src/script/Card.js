@@ -62,11 +62,6 @@ export class Card {
 
   remove(event) {
     event.stopPropagation();
-    /*
-      + Можно лучше: event не передан в функцию.
-      Использование window.event считается нежелательным, так как может привести к трудноотлавливаемым багам.
-      https://developer.mozilla.org/en-US/docs/Web/API/Window/event
-     */  
     
     this.api.deleteCard(this).then(
       () => {

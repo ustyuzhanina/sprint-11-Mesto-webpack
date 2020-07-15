@@ -12,10 +12,6 @@ class PopupUserInfo extends Popup {
     this.clickPopupUserInfoButton = this.clickPopupUserInfoButton.bind(this);
   }
 
-  /*
-    Можно лучше: Название метода должно отражать то действие, которое он выполняет.
-    "PopupUserInfo" не обязательно содержать в названии, так как попап итак относится только к этой форме.
-   */
   clickPopupUserInfoButton(userCurrentData) {
     this.userName.value = userCurrentData.name.textContent;
     this.userAbout.value = userCurrentData.about.textContent;
@@ -32,7 +28,6 @@ class PopupUserInfo extends Popup {
     const userData = {};
     userData.name = this.userName.value;
     userData.about = this.userAbout.value;
-    // this.close();
     return userData;
   }
 

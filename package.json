@@ -2,7 +2,7 @@
   "name": "sprint-11-mesto-webpack",
   "homepage": "https://ustyuzhanina.github.io/sprint-11-Mesto-webpack",
   "version": "1.0.0",
-  "description": "",
+  "description": "A meeting spot for sharing breathtaking pictures online",
   "main": "index.js",
   "scripts": {
     "build": "rimraf dist && cross-env NODE_ENV=production webpack --mode production",
