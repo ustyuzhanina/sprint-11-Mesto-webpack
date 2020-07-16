@@ -1,6 +1,14 @@
-'use strict';
+import {Card} from "./Card.js";
+import {CardList} from "./CardList.js";
+import {PopupNewPlace} from "./PopupNewPlace.js";
+import {PopupUserInfo} from "./PopupUserInfo.js";
+import {PopupImage} from "./PopupImage.js";
+import {UserInfo} from "./UserInfo.js";
+import {FormValidator} from "./FormValidator.js";
+import {Api} from "./Api.js";
 
-(function () {
+export default (function () {
+
   const list = document.querySelector(".places-list");
   const popupNewPlace = document.querySelector(".popup_new-place");
   const popupNewPlaceButton = document.querySelector(".user-info__place-button");
@@ -19,9 +27,10 @@
   const popupObj = new PopupImage(popupImage);
   const cardList = new CardList(list);
 
+  const API_URL = NODE_ENV === 'production' ? 'https://praktikum.tk' : 'http://praktikum.tk';
 
   const config = {
-    baseUrl: 'https://praktikum.tk/cohort11',
+    baseUrl: `${API_URL}/cohort11`,
     headers: {
       authorization: '0545870b-6ad1-4b08-a3b6-74b447a5a618',
       'Content-Type': 'application/json',
@@ -178,25 +187,6 @@
 
   // конец IIFE
 })()
-
-/*
-  Отлично, класс Api создан, данные с сервера приходят и профиль пользователя сохраняется
-  Но есть несколько замечаний:
-
-  Надо исправить:
-  - + создавать экземпляр CardList не внутри запроса
-  - + при добавлении карточек через попап падает ошибка
-  - + все изменения на странице должны происходить, только после того, как
-  сервер ответил подтверждением, в том числе и закрытие попапа
-
-  Можно лучше:
-  - + передавать в класс только базовый адрес сервера https://praktikum.tk/cohort11, 
-  имена ендпоинтов добавлять к нему в самом методе
-  - + проверка ответа сервера и преобразование из json
-  дублируется во всех методах класса Api, лучше вынести в отдельный метод
-
-*/
-
 
 /*
   Все замечания исправлены

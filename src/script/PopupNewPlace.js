@@ -1,4 +1,4 @@
-'use strict';
+import {Popup} from "./Popup.js";
 
 class PopupNewPlace extends Popup {
 
@@ -14,10 +14,6 @@ class PopupNewPlace extends Popup {
 
   // при нажатии на кнопку открытия попапа ставим фокус на поле name,
   /* и подставляем текущие данные пользователя*/
-  /*
-    Можно лучше: Название метода должно отражать то действие, которое он выполняет.
-    "PopupNewPlace" не обязательно содержать в названии, так как попап итак относится только к этой форме.
-   */
   clickPopupNewPlaceButton() {
     this.name.focus();
     //делаем кнопку неактивной при открытии, когда валидации еще не было
@@ -30,8 +26,9 @@ class PopupNewPlace extends Popup {
     const newCard = {};
     newCard.name = this.name.value;
     newCard.link = this.link.value;
-    // this.close();
     return newCard;
   }
 
 }
+
+export {PopupNewPlace};

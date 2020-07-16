@@ -1,10 +1,8 @@
-'use strict';
-
-class Popup {
+export class Popup {
 
   constructor(popup, onClose) {
     this.popupElement = popup;
-    this.popupCloser = this.popupElement.querySelector(".popup__close"); // + Можно лучше: Опечатка, двойная точка с запятой.
+    this.popupCloser = this.popupElement.querySelector(".popup__close");
     this.open = this.open.bind(this);
     this.close = this.close.bind(this);
     this.onClose = onClose;

@@ -1,6 +1,4 @@
-'use strict';
-
-class Api {
+export class Api {
   constructor(config) {
     this.baseUrl = config.baseUrl;
     this.headers = config.headers;

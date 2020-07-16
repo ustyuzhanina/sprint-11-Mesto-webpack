@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mesto</title>
-  <link rel="stylesheet" href="./pages/index.css">
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
 </head>
 <body>
   <div class="root">
     <header class="header root__section">
-      <img src="./images/logo.svg" alt="mesto logo" class="logo">
+      <img src="<%=require('./images/logo.svg')%>" alt="mesto logo" class="logo">
     </header>
     <div class="profile root__section">
       <div class="user-info">
@@ -29,7 +29,7 @@
 
       <div class="popup popup_new-place">
         <div class="popup__content">
-          <img src="./images/close.svg" alt="" class="popup__close">
+          <img src="<%=require('./images/close.svg')%>" alt="Закрыть" class="popup__close">
           <h3 class="popup__title">Новое место</h3>
           <form class="popup__form popup__form_new-place" name="new" novalidate>
               <input type="text" id="name" name="name" class="popup__input popup__input_name" placeholder="Название" required minlength="2" maxlength="30">
@@ -43,7 +43,7 @@
 
       <div class="popup popup_user-info">
         <div class="popup__content">
-          <img src="./images/close.svg" alt="" class="popup__close">
+          <img src="<%=require('./images/close.svg')%>" alt="Закрыть" class="popup__close">
           <h3 class="popup__title">Редактировать профиль</h3>
           <form class="popup__form popup__form_user-info" name="edit" novalidate>
               <input type="text" id="username" name="username" class="popup__input popup__input_username" placeholder="Имя" required minlength="2" maxlength="30">
@@ -58,7 +58,7 @@
       <div class="popup popup_image">
         <div class="popup__image-container">
           <img src="#" alt="Изображение" class="popup__image-content">
-          <img src="./images/close.svg" alt="Закрыть" class="popup__close">
+          <img src="<%=require('./images/close.svg')%>" alt="Закрыть" class="popup__close">
         </div>
       </div>
 
@@ -66,18 +66,7 @@
 
   </div>
 
-  <!-- + Надо исправить: хранить js файлы следует в отдельной папке -->
-  <script src="script/data.js"></script>
-  <script src="script/Card.js"></script>
-  <script src="script/CardList.js"></script>
-  <script src="script/Popup.js"></script>
-  <script src="script/PopupNewPlace.js"></script>
-  <script src="script/PopupUserInfo.js"></script>
-  <script src="script/PopupImage.js"></script>
-  <script src="script/UserInfo.js"></script>
-  <script src="script/FormValidator.js"></script>
-  <script src="script/Api.js"></script>
-  <script src="script/script.js"></script>
+  <script src="<%= htmlWebpackPlugin.files.js %>"></script>
 
 </body>
 </html>
